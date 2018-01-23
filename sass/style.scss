@@ -1,0 +1,11 @@
+@charset "UTF-8";
+$mainColor: #d3135a;
+
+body{
+    background-color: #e6e6e6;
+}
+
+header{
+    background: $mainColor;
+    height: 250px;
+}
