@@ -1,23 +1,148 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
-        <nav>
-        <ul>
-            <li>
-                <a href="#">menu link</a>
-                <a href="#">menu link</a>
-                <a href="#">menu link</a>
-                <a href="#">menu link</a>
-            </li>
-        </ul>
-        </nav>
 
-    </header>
+<body>
+    <div class="content">
+        <header>
+            <a href="#">
+                <h1>The Site</h1>
+            </a>
+            <div class="top-menu">
+                <nav>
+                    <ul>
+                        <a href="#">menu link</a>
+                        <a href="#">menu link</a>
+                        <a href="#">menu link</a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="primary-menu">
+                <nav>
+                    <ul>
+                        <div class="dropdown">
+                            <a href="#">menu link</a>
+                            <div class="dropdown-content">
+                                <a href="#">Integer eget mauris</a>
+                                <a href="#">Pulvinar consectetur</a>
+                                <a href="#">Oget mauris praesent</a>
+                                <a href="#">Interdum justo</a>
+                                <a href="#">Nec neque fringilla</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                                <a href="#">menu link</a>
+                                <div class="dropdown-content">
+                                    <a href="#">Integer eget mauris</a>
+                                    <a href="#">Pulvinar consectetur</a>
+                                    <a href="#">Oget mauris praesent</a>
+                                </div>
+                            </div>
+                        <a href="#">menu link</a>
+                        <a href="#">menu link</a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="primaryBlock">
+            <h1>Aenean ac diam nec neque fringilla</h1>
+            <p>Fusce tincidunt nulla non augue semper tempus ut id enim. Donec fermentum nisl accumsan purus tristique fermentum.
+                Cras at sodales risus. Fusce ullamcorper fermentum felis. Sed eleifend augue quis diam iaculis consequat.
+                Nam fermentum maximus magna a dignissim. Mauris a est eu enim varius pretium quis sit amet nisl.</p>
+            <p>Fusce tincidunt nulla non augue semper tempus ut id enim. Donec fermentum nisl accumsan purus tristique fermentum.
+                Cras at sodales risus. Fusce ullamcorper fermentum felis. Sed eleifend augue quis diam iaculis consequat.
+                Nam fermentum maximus magna a dignissim. Mauris a est eu enim varius pretium quis sit amet nisl.</p>
+            <p>Fusce tincidunt nulla non augue semper tempus ut id enim. Donec fermentum nisl accumsan purus tristique fermentum.
+                Cras at sodales risus. Fusce ullamcorper fermentum felis. Sed eleifend augue quis diam iaculis consequat.
+                Nam fermentum maximus magna a dignissim. Mauris a est eu enim varius pretium quis sit amet nisl.</p>
+            <p>Fusce tincidunt nulla non augue semper tempus ut id enim. Donec fermentum nisl accumsan purus tristique fermentum.
+                Cras at sodales risus. Fusce ullamcorper fermentum felis. Sed eleifend augue quis diam iaculis consequat.
+                Nam fermentum maximus magna a dignissim. Mauris a est eu enim varius pretium quis sit amet nisl.</p>
+            <p>Fusce tincidunt nulla non augue semper tempus ut id enim. Donec fermentum nisl accumsan purus tristique fermentum.
+                Cras at sodales risus. Fusce ullamcorper fermentum felis. Sed eleifend augue quis diam iaculis consequat.
+                Nam fermentum maximus magna a dignissim. Mauris a est eu enim varius pretium quis sit amet nisl.</p>
+        </section>
+        <article class="secondaryBlock">
+            Duis at lacus magna. Mauris ut enim justo. Maecenas eget auctor justo. Pellentesque posuere turpis quis faucibus tristique.
+            Etiam id accumsan diam. Donec dapibus pretium ex, eget pellentesque nunc pharetra sit amet. Cras porta mi at
+            arcu ornare rhoncus.
+        </article>
+        <article class="thirdBlock">
+            <h2>Aenean ac diam nec neque</h2>
+            <a href="#">Maecenas eget auctor justo</a>
+            <br>
+            <hr>
+            <a href="#">Donec lobortis justo eu </a>
+            <br>
+            <hr>
+            <a href="#">Nunc commodo ac</a>
+            <br>
+        </article>
+        <aside>
+            <article>
+                <h2>Aenean ac diam
+                    <br> nec neque fringilla</h2>
+                <hr>
+                <p>Duis eget auctor enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                    egestas. Vestibulum sed leo id dui congue efficitur. Phasellus at maximus eros, nec viverra enim. Morbi
+                    placerat libero nisl, id fermentum libero accumsan in. Aliquam pellentesque eu massa sed efficitur. Cras
+                    bibendum finibus auctor.</p>
+            </article>
+            <form action="/action_page.php">
+                First name:
+                <br>
+                <input type="text" name="firstname" value="Enter your name">
+                <br> Last name:
+                <br>
+                <input type="text" name="lastname" value="Enter your last name">
+                <br> Message:
+                <br>
+                <textarea name="comment" form="usrform"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </aside>
+        <section class="downsideBlock">
+            <article>
+                <p>Etiam et odio aliquet, cursus dolor nec, interdum libero. Aenean sapien eros, pretium ut mollis at, congue
+                    non libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Suspendisse vehicula tortor dolor, quis vulputate sapien tempus consequat.</p>
+            </article>
+            <article>
+                <p>Etiam et odio aliquet, cursus dolor nec, interdum libero. Aenean sapien eros, pretium ut mollis at, congue
+                    non libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Suspendisse vehicula tortor dolor, quis vulputate sapien tempus consequat.</p>
+            </article>
+            <article>
+                <p>Etiam et odio aliquet, cursus dolor nec, interdum libero. Aenean sapien eros, pretium ut mollis at, congue
+                    non libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Suspendisse vehicula tortor dolor, quis vulputate sapien tempus consequat.</p>
+            </article>
+        </section>
+        <footer>
+            <nav class="footer-menu">
+                <ul>
+                    <a href="#">menu link</a>
+                    <a href="#">menu link</a>
+                    <a href="#">menu link</a>
+                    <a href="#">menu link</a>
+                    <a href="#">menu link</a>
+                    <a href="#">menu link</a>
+                </ul>
+            </nav>
+            <p>Duis eget auctor enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                Vestibulum sed leo id dui congue efficitur. Phasellus at maximus eros, nec viverra enim. Morbi placerat libero
+                nisl, id fermentum libero accumsan in. Aliquam pellentesque eu massa sed efficitur. Cras bibendum finibus
+                auctor. Duis pharetra tempus sem, id tincidunt nisl condimentum in. Duis et consequat sapien.</p>
+            <h1>The Site</h1>
+        </footer>
+    </div>
 </body>
+
 </html>
