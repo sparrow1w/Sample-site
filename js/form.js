@@ -6,8 +6,6 @@ function onFormSubmit() {
     var elementas = document.getElementById('p1');
 
 
-
-    var numb = /^[0-9]+$/;
     if (firstname == "") {
         elementas.innerHTML = "Please enter Your first name!";
         elementas.className = "red-alert";
@@ -17,8 +15,8 @@ function onFormSubmit() {
         elementas.innerHTML = "Please enter Your last name!";
         elementas.className = "red-alert";
         return false;
-        
-    }else if (firstname.match(numb) || lastname.match(numb) ) {
+
+    }else if (!/^[a-zA-Z ]*$/g.test(firstname) || (!/^[a-zA-Z ]*$/g.test(lastname))){
         elementas.innerHTML = "First name and last name must have alphabet characters only!";
         elementas.className = "red-alert";
         return false;
@@ -33,6 +31,4 @@ function onFormSubmit() {
         return true;
 
     }
-
-
 }
