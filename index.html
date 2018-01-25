@@ -25,6 +25,10 @@
             </div>
             <div class="primary-menu">
                 <nav>
+                        <input type="checkbox" id="menu-toggle" />
+                        <label for="menu-toggle" class="label-toggle">  
+                                <div class="menu-text">Menu</div>
+                          </label>
                     <ul>
                         <div class="dropdown">
                             <a href="#">menu link</a>
@@ -37,13 +41,13 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                                <a href="#">menu link</a>
-                                <div class="dropdown-content">
-                                    <a href="#">Integer eget mauris</a>
-                                    <a href="#">Pulvinar consectetur</a>
-                                    <a href="#">Oget mauris praesent</a>
-                                </div>
+                            <a href="#">menu link</a>
+                            <div class="dropdown-content">
+                                <a href="#">Integer eget mauris</a>
+                                <a href="#">Pulvinar consectetur</a>
+                                <a href="#">Oget mauris praesent</a>
                             </div>
+                        </div>
                         <a href="#">menu link</a>
                         <a href="#">menu link</a>
                     </ul>
@@ -94,18 +98,19 @@
                     placerat libero nisl, id fermentum libero accumsan in. Aliquam pellentesque eu massa sed efficitur. Cras
                     bibendum finibus auctor.</p>
             </article>
-            <form action="/action_page.php">
+            <form name="login-form" action="/action_page.php" onsubmit="return onFormSubmit()" method="post">
                 First name:
                 <br>
-                <input type="text" name="firstname" value="Enter your name">
+                <input type="text" name="firstname" placeholder="Enter your name">
                 <br> Last name:
                 <br>
-                <input type="text" name="lastname" value="Enter your last name">
+                <input type="text" name="lastname" placeholder="Enter your last name">
                 <br> Message:
                 <br>
-                <textarea name="comment" form="usrform"></textarea>
+                <textarea id="myTextarea" name="comment"></textarea>
                 <br>
                 <input type="submit" value="Submit">
+                <div id="p1"></div>
             </form>
         </aside>
         <section class="downsideBlock">
@@ -143,6 +148,7 @@
             <h1>The Site</h1>
         </footer>
     </div>
+    <script src="js/form.js"></script>
 </body>
 
 </html>

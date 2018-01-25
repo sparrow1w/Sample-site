@@ -1,6 +1,22 @@
 
 $mainColor: #d3135a;
 
+@mixin size850 {
+    @media only screen and (max-width: 850px) {
+        @content;
+    }
+}
+@mixin size480 {
+    @media only screen and (max-width: 480px) {
+        @content;
+    }
+}
+@mixin size700 {
+    @media only screen and (max-width: 700px) {
+        @content;
+    }
+}
+
 body{
     font-family: 'Trebuchet MS', Arial, sans-serif;
     background-color: #e6e6e6;
@@ -28,6 +44,9 @@ body{
         background: $mainColor;
         height: 115px;
         margin-bottom: 18px;
+        @include size850{
+            height: 151px;
+        }
 
         h1{
             display: block;
@@ -44,15 +63,19 @@ body{
         
         .top-menu{
             float: right;
-            position: relative;
-            top: 0; 
+            position: absolute;
+            top: 0;
+            right: 0;
             margin-right: 68px;
+            @include size480{
+                margin-right: 10px;
+            }
       
             a{
             color: black;
             font-size: 14px;
             text-decoration: none;
-            margin-left: 8px;
+            margin-left: 5px;
             font-weight: 500;
             }
             a:hover{
@@ -64,9 +87,61 @@ body{
             float: right;
             clear: left;
             margin-right: 68px;
+            @include size850{
+                position: relative;
+                bottom: -40px;
+            }
+            @include size700{
+                margin-right: 0;
+            }
+                    
+            #menu-toggle {
+                display: none;
+            }
+            #menu-toggle:checked~ul {
+                @include size700{
+                    opacity: 1;
+                    height: 100%;
+                    /* fallback */
+                    visibility: visible;
+                    background-color: #4d4d4d;
+                    width: 100%;
+                    padding-left: 0;
+
+                }
+            }
+            .label-toggle {
+                display:none;
+                @include size700{
+                    cursor: pointer;
+                    display: block;
+                    height: 35px;
+                    margin-top: 1em;
+                    width: 100vw;
+                    color: white;
+                    border-top: 1px solid #ffffff;
+
+                }
+                .menu-text{
+                    display: block;
+                    font-size: 24px;
+                    text-align: center;
+                    margin-top: 6px;
+                }
+            }
 
             ul{
                 display: inline-flex;
+                @include size700{
+                    display: block;
+                    height: 0;
+                    list-style-type: none;
+                    opacity: 0;
+                    text-align: center;
+                    visibility: hidden;
+                    float: left;
+                    margin-top: 0;
+                }
                 
                 a{
                     font-size: 20px;
@@ -75,9 +150,19 @@ body{
                     font-weight: 500;
                     color: #ffffff;
                     padding-bottom: 30px;
+                    @include size700{
+                        display: block;
+                        width: 100%;
+                        padding: 5px 0;
+                        margin-left: 0;
+                    }
                     }
                     a:hover {
-                        color: #333
+                        color: #333;
+                        @include size700{
+                            background-color: #898989;
+                        }
+
                     }
                     .dropdown-content {
                         display: none;
@@ -86,6 +171,14 @@ body{
                         min-width: 160px;
                         z-index: 1;
                         top: 115px;
+                        @include size850{
+                            top: 51px;
+                        }
+                        @include size700{
+                            top: 0;
+                            position: relative;
+                            background-color: #333;
+                        }
 
                         a {
                             color: #ffffff;
@@ -94,6 +187,9 @@ body{
                             display: block;
                             margin-left: 0;
                             font-size: 12px;
+                            @include size700{
+                                padding-left: 0;
+                            }
                         }
                         a:hover{
                             background-color: #666666;
@@ -109,10 +205,13 @@ body{
                         border-left: 10px solid transparent;
                         border-right: 10px solid transparent;
                         z-index: 100;
+                        @include size700{
+                            display: none;
+                        }
                     } 
 
 
-                    .dropdown:hover{
+                    .dropdown:hover {
                         .dropdown-content{
                             display: block;
                     }
@@ -130,10 +229,18 @@ body{
         grid-row-end: 7;
         margin-left: 68px;
         padding-top: 0;
+        @include size700{
+            grid-column-end: 4;
+            margin-right: 68px;
+        }
+        @include size480{
+            margin: 0 5px;
+        }   
 
         h1{
             font-family: 'Times New Roman', Times, serif;
             font-size: 37px;
+            line-height: 29px;
         }
     }
     
@@ -145,6 +252,13 @@ body{
         grid-row-start: 7;
         grid-row-end: 8;
         margin-left: 68px;
+        @include size700{
+            grid-column-end: 4;
+            margin-right: 68px;
+        }
+        @include size480{
+            margin: 0 5px;
+        }   
         
 
     }
@@ -156,10 +270,22 @@ body{
         grid-row-start: 7;
         grid-row-end: 8;
         padding-top: 0;
+        @include size700{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            margin-left: 68px;
+            grid-row-start: 8;
+            grid-row-end: 9;
+            margin-right: 68px;
+        }
+        @include size480{
+            margin: 0 5px;
+        }   
 
         h2{
             font-family: 'Times New Roman', Times, serif;
             font-size: 24px;
+            line-height: 29px;
         }
         a{
           color: #0071bc;
@@ -173,11 +299,23 @@ body{
         grid-row-end: 8;
         margin-right: 68px;
         padding-top: 0;
+        @include size700{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            margin-left: 68px;
+            grid-row-start: 10;
+            grid-row-end: 11;
+            margin-right: 68px;
+        }
+        @include size480{
+            margin: 0 10px;
+        }   
 
         h2{
             font-family: 'Times New Roman', Times, serif;
             font-size: 24px;
             margin-top: 5px;
+            line-height: 29px;
         }
 
         hr{
@@ -195,7 +333,7 @@ body{
                 width: 100%;
                 height: 30px;
                 text-indent: 5px;
-                color: #929292;
+                color: #333;
                 margin-bottom: 10px;
             
             }
@@ -213,6 +351,16 @@ body{
                 font-size: 14px;
 
             }
+            .red-alert{
+                color: red;
+                margin-top: 5px;
+                font-weight: 600;
+            }
+            .green-alert{
+                margin-top: 5px;
+                color: $mainColor;
+                font-weight: 600;
+            }
         }
         
         
@@ -227,6 +375,14 @@ body{
         grid-row-start: 8;
         grid-row-end: 9;
         margin: 0 68px;
+        @include size700{
+            grid-row-start: 9;
+            grid-row-end: 10;
+            grid-template-columns: 1fr;
+        }
+        @include size480{
+            margin: 0 5px;
+        }   
     }
     footer{
         background-color: #666666;
@@ -234,22 +390,37 @@ body{
         grid-column-end: 4;
         grid-row-start: 9;
         grid-row-end: 10;
+        @include size700{
+            grid-row-start: 11;
+            grid-row-end: 12;
+        }
 
         .footer-menu{
 
-            a{
-                color: #ffffff;
-                text-decoration: none;
-                font-size: 12px;
-                border-right: 1px solid #ffffff;
-                padding: 0 15px;
+            ul{ 
+                @include size480{
+                    padding-left: 0;
+                }   
+                a{
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    border-right: 1px solid #ffffff;
+                    padding: 0 15px;
+                    @include size480{
+                        display: block;  
+                        text-align: center;
+                        border-bottom: 1px solid #ffffff;
+                        border-right: none;
+                    }   
+                }
+                a:last-of-type{
+                    border-right: none;
+                }
+                a:hover{
+                    color: #333
+                } 
             }
-            a:last-of-type{
-                border-right: none;
-            }
-            a:hover{
-                color: #333
-            } 
         }
         p{
             width: 80%;
